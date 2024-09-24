@@ -7,6 +7,7 @@ audio.sys.noisy.broadcast.delay=600
 audio.sys.offload.pstimeout.secs=3
 audio.safemedia.bypass=true
 audio.offload.min.duration.secs=30
+dev.pm.dyn_samplingrate=1
 persist.vendor.audio.hac.enable=false
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 ro.config.media_vol_steps=25
@@ -26,10 +27,9 @@ persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
 
 # Display
-debug.egl.hw=1
-debug.sf.hw=1
-dev.pm.dyn_samplingrate=1
-persist.hwc.enable_vds=1
+vendor.display.enable_default_color_mode=1
+vendor.gralloc.enable_fb_ubwc=1
+vendor.display.disable_skip_validate=1
 
 # Filesystem
 fs_mgr.overlayfs.prefer_cache_backing_storage=true
@@ -56,6 +56,10 @@ ro.hwui.text_small_cache_width=1024
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=2048
+
+# Graphics
+debug.hwui.skia_atrace_enabled=false
+persist.demo.hdmirotationlock=false
 
 # IMS
 persist.dbg.ims_volte_enable=1
@@ -94,4 +98,5 @@ persist.timed.enable=true
 
 # WiFi Display
 persist.debug.wfd.enable=1
+persist.hwc.enable_vds=1
 persist.sys.wfd.virtual=0
